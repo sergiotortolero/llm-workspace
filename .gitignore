@@ -46,5 +46,8 @@ Thumbs.db
 **/.tmp.drivedownload/
 **/.tmp.drive*
 
+# === Local per-user Claude settings (not shared; grows with allowed commands) ===
+.claude/settings.local.json
+
 # === Kibo is its own git repo (github.com/kibo-developer/kibo-platform) — keep separate ===
 Proyectos/Personal/Kibo/
