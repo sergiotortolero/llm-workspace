@@ -1,0 +1,26 @@
+{
+  "_README": "Plantilla de conectores MCP para datos. Copia este archivo a `.mcp.json` (mismo nivel) y reemplaza los valores REPLACE_* DESPUÉS de instalar cada servidor. Mientras tenga placeholders NO lo dejes como `.mcp.json`, porque Claude Code intentaría arrancar servidores rotos. Ver docs/setup/data-connectivity.md.",
+
+  "mcpServers": {
+    "sql": {
+      "_doc": "Microsoft SQL MCP Server (Data API Builder). Soporta SQL Server / Azure SQL / PostgreSQL / MySQL y ejecuta stored procedures. Instala: `dotnet tool install -g Microsoft.DataApiBuilder`. Configura dab-config.json con tu conexión y expón el endpoint MCP. Docs: https://learn.microsoft.com/en-us/sql/mcp/",
+      "command": "REPLACE_AFTER_INSTALL_dab_or_npx",
+      "args": ["REPLACE_WITH_DAB_MCP_ARGS"],
+      "env": {
+        "DATABASE_CONNECTION_STRING": "REPLACE_WITH_YOUR_CONNECTION_STRING"
+      }
+    },
+
+    "powerbi-modeling": {
+      "_doc": "Power BI Modeling MCP (local). Lee/escribe TMDL en una carpeta PBIP. Repo: https://github.com/microsoft/powerbi-modeling-mcp",
+      "command": "REPLACE_AFTER_INSTALL",
+      "args": []
+    },
+
+    "powerbi-remote": {
+      "_doc": "Power BI remote MCP (consulta semantic models con DAX vía Copilot). Requiere workspace Premium/PPU/Fabric con endpoint XMLA. Docs: https://learn.microsoft.com/en-us/power-bi/developer/mcp/remote-mcp-server-get-started",
+      "type": "http",
+      "url": "REPLACE_WITH_REMOTE_POWERBI_MCP_URL"
+    }
+  }
+}

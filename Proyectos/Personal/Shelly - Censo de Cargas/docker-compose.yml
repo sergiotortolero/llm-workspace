@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: shelly_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-shelly_energy}
+      POSTGRES_USER: ${DB_USER:-shelly_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-shelly_pass}
+    ports:
+      - "5432:5432"
+    volumes:
+      - shelly_pg_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+
+  receiver:
+    build:
+      context: ./receiver
+    container_name: shelly_receiver
+    restart: unless-stopped
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-shelly_energy}
+      DB_USER: ${DB_USER:-shelly_user}
+      DB_PASSWORD: ${DB_PASSWORD:-shelly_pass}
+      APP_PORT: 8765
+    ports:
+      - "8765:8765"
+    depends_on:
+      - postgres
+
+  dashboard:
+    build:
+      context: ./dashboard
+    container_name: shelly_dashboard
+    restart: unless-stopped
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-shelly_energy}
+      DB_USER: ${DB_USER:-shelly_user}
+      DB_PASSWORD: ${DB_PASSWORD:-shelly_pass}
+    ports:
+      - "8501:8501"
+    depends_on:
+      - postgres
+
+  adminer:
+    image: adminer
+    container_name: shelly_adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+volumes:
+  shelly_pg_data:

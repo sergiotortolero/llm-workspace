@@ -1,0 +1,50 @@
+# === Secrets / credentials (NEVER commit) ===
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.pfx
+**/secrets*
+
+# === Sensitive (PII / client) ===
+**/embedded.mobileprovision
+**/*.mobileprovision
+**/udids_from_profile.txt
+**/profile_extracted.plist
+
+# === Vendored third-party repos (use the plugin marketplace instead) ===
+vendor/
+
+# === Node / web ===
+**/node_modules/
+**/.next/
+**/out/
+**/.turbo/
+**/dist/
+
+# === Python ===
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/venv/
+
+# === Docker / DB data (huge, binary, may contain data) ===
+**/.docker/postgres-data/
+**/postgres-data/
+
+# === Binaries ===
+*.exe
+*.dll
+
+# === OS / editor noise ===
+Thumbs.db
+.DS_Store
+
+# === Google Drive sync temp (this workspace is Drive-synced) ===
+**/.tmp.driveupload/
+**/.tmp.drivedownload/
+**/.tmp.drive*
+
+# === Kibo is its own git repo (github.com/kibo-developer/kibo-platform) — keep separate ===
+Proyectos/Personal/Kibo/
