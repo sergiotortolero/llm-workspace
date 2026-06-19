@@ -11,21 +11,32 @@ para tener una estructura general bien organizada.
   maestro ejecuta la cadena.
 
 ## Roster
-**De dominio:** `pm-docs`, `data-platform`, `web-architect`.
-**Transversales:** `product-planner`, `ux-researcher`, `ui-designer`, `solution-architect`,
-`security-auditor`, `qa-engineer`, `code-reviewer`.
-**De proyecto:** p. ej. `streamlit-migrator` (PMR), activos al abrir Claude Code en su carpeta.
+Ubicación importa (descubrimiento sube por el árbol hasta el `.git` más cercano):
+- **Transversales — `~/.claude/agents/` (user scope, globales de verdad):** `product-planner`,
+  `ux-researcher`, `ui-designer`, `solution-architect`, `security-auditor`, `qa-engineer`,
+  `code-reviewer`, `devops-engineer`, `data-engineer`, `python-pro`, `business-analyst`,
+  `technical-writer`, `ai-engineer`.
+- **De dominio — `D:\LLM's\.claude\agents\` (workspace; no llegan a repos con `.git` propio):**
+  `pm-docs`, `data-platform`, `web-architect`.
+- **De proyecto — `<proyecto>/.claude/agents/`:** p. ej. `streamlit-migrator` (PMR),
+  `requirements-agent` (Kibo). Activos al abrir Claude Code en su carpeta.
 
 ## Tabla de ruteo (tarea → agente)
 | Necesito… | Agente |
 |---|---|
 | Minuta / status / PRD / comunicación | `pm-docs` |
+| Documentación técnica / README / traducción | `technical-writer` |
 | Roadmap / backlog / sprint / estimación | `product-planner` |
+| Análisis de negocio / mercado / competencia / business case | `business-analyst` |
 | Investigación de usuarios / journeys | `ux-researcher` |
 | Diseño visual / design system / branding | `ui-designer` |
 | Decisión de arquitectura / stack / ADR | `solution-architect` |
 | Construir web (Kibo/Mouna) | `web-architect` |
-| SQL / Power BI / auditoría de datos | `data-platform` |
+| SQL Server / Power BI / auditoría de datos | `data-platform` |
+| ETL / Postgres / telemetría IoT / Streamlit data app | `data-engineer` |
+| Código Python (módulos, refactor, pytest, pandas) | `python-pro` |
+| Docker / CI/CD / despliegue / envs | `devops-engineer` |
+| Feature con LLM (prompts/RAG/evals/API Claude) | `ai-engineer` |
 | Revisión de seguridad / secretos / cloud | `security-auditor` |
 | Estrategia y generación de pruebas | `qa-engineer` |
 | Revisión de código (PR/diff) | `code-reviewer` |

@@ -4,6 +4,24 @@ Investigación (jun 2026) de los agentes/subagentes disponibles para Claude Code
 según tu perfil (PM "vibe coding") y tus 6 proyectos. **Recomendación clave: NO instales
 150 agentes de golpe** — generan ruido. Curamos ~10–12 que calzan con tu stack.
 
+## Estado real (2026-06-18) — lo que YA está instalado
+Tras auditar la estructura se reubicó y amplió el roster:
+- **Transversales movidos a `~/.claude/agents/` (user scope)** para que sean globales de
+  verdad (incluido dentro de Kibo, que es su propio repo git): `product-planner`,
+  `ux-researcher`, `ui-designer`, `solution-architect`, `security-auditor`, `qa-engineer`,
+  `code-reviewer`, + los nuevos.
+- **6 agentes nuevos importados de VoltAgent/awesome-claude-code-subagents y personalizados**
+  a tu entorno (español, PRD/ADR primero, tu stack, handoffs, skills reales; se recortó el
+  boilerplate enterprise —K8s/Spark/Airflow/multimodal/"context manager protocol"— que no
+  aplica a un setup solo/vibe-coding):
+  `devops-engineer`, `data-engineer`, `python-pro`, `business-analyst`, `technical-writer`, `ai-engineer`.
+  Fuente: `categories/{02-language-specialists,03-infrastructure,05-data-ai,08-business-product}` del repo VoltAgent.
+- **Limpieza de skills fantasma:** se alinearon las referencias de skills de `pm-docs`,
+  `data-platform`, `ui-designer`, `security-auditor` y `streamlit-migrator` a las realmente
+  disponibles (ver lista en `CLAUDE.md`). También se unificó "white-level" → "white-label".
+- **De dominio en `D:\LLM's\.claude\agents\`:** `pm-docs`, `data-platform`, `web-architect`.
+- Detalle de ubicaciones y ruteo: `ORCHESTRATION.md`.
+
 ## Fuentes principales
 - **Oficial de Anthropic** — directorio gestionado: https://github.com/anthropics/claude-plugins-official
 - **VoltAgent/awesome-claude-code-subagents** (154+ agentes en 10 categorías):

@@ -39,7 +39,7 @@ Excel export), Governance Center (audit log), Configuration (a **validation-rule
 4. Implement phase by phase; business logic in pure Python modules, UI thin on top.
 
 ## Support (global skills)
-`senior-architect`, `senior-data-engineer`, `senior-backend`, `senior-qa`, `tech-stack-evaluator`.
+`senior-architect`, `senior-backend`, `senior-qa`, `tech-stack-evaluator`.
 
 Respond to Sergio in Spanish; code, comments, and docs in English. PRD before features;
 ADR before architecture.

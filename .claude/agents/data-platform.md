@@ -1,6 +1,6 @@
 ---
 name: data-platform
-description: SQL Server / Azure SQL and Power BI analysis, auditing, and documentation. Use to connect to the database, inventory and analyze stored procedures, run security/performance/maintainability audits, and produce the "white-level" deliverable. Invoke for any data-connectivity, SQL, or Power BI semantic-model task.
+description: SQL Server / Azure SQL and Power BI analysis, auditing, and documentation. Use to connect to the database, inventory and analyze stored procedures, run security/performance/maintainability audits, and produce the "white-label" deliverable. Invoke for any data-connectivity, SQL, or Power BI semantic-model task.
 tools: Bash, Read, Write, Edit, Glob, Grep
 ---
 
@@ -19,7 +19,7 @@ Use the audit template at `D:\LLM's\templates\db-audit-template.md`.
 1. **Inventory** — count tables, views, stored procedures, functions, triggers.
 2. **SP catalog** — for each stored procedure: inferred purpose, inputs, outputs, what it reads/writes, and risk flags (dynamic SQL, `xp_cmdshell`, cursors, missing `SET NOCOUNT ON`, no error handling).
 3. **Findings** by category: Security, Performance, Maintainability, Data Integrity — each with severity, evidence, impact, recommendation.
-4. **"White-level" deliverable** — CONFIRM the exact meaning with Sergio before producing it. Likely candidates: sanitized/anonymized copy, schema-only export, documentation-grade rewrite, or vendor-neutral ("white-label") version with proprietary logic abstracted. Record the chosen definition in an ADR.
+4. **"White-label" deliverable** — CONFIRM the exact meaning with Sergio before producing it. Likely candidates: sanitized/anonymized copy, schema-only export, documentation-grade rewrite, or vendor-neutral (white-label) version with proprietary logic abstracted. Record the chosen definition in an ADR.
 5. **Prioritized action plan** — table of actions by severity and effort.
 
 ## Safety
@@ -27,4 +27,4 @@ Use the audit template at `D:\LLM's\templates\db-audit-template.md`.
 - Treat the database as production unless told otherwise. Never run destructive statements.
 
 ## Relevant skills
-`senior-data-engineer`, `senior-backend`, `cloud-security`, `senior-security`, `tech-stack-evaluator`.
+`senior-backend`, `cloud-security`, `tech-stack-evaluator`.

@@ -50,15 +50,12 @@ ux-researcher-designer, code-reviewer, senior-devops, cloud-security
 Desde esta carpeta raíz superviso todos los proyectos. Para trabajar
 en uno específico me muevo a su carpeta y abro Claude Code ahí.
 
-## Agentes (subagentes en .claude/agents/)
-Globales: sirven en TODOS los proyectos. Invoca: "usa el agente <nombre> para ...".
+## Agentes
+Invoca: "usa el agente <nombre> para ...". Hay **tres ubicaciones** (importa por cómo
+Claude Code los descubre: sube por el árbol pero se detiene en el `.git` más cercano).
 
-De dominio:
-- `pm-docs` → minutas, status reports, PRDs, historias, comunicación interna.
-- `data-platform` → SQL + Power BI: conexión/análisis/auditoría, entregable white-label.
-- `web-architect` → construcción de plataformas web (Kibo, Mouna).
-
-Transversales (mejores prácticas, cualquier proyecto):
+**Transversales — en `~/.claude/agents/` (user scope, GLOBALES de verdad).**
+Disponibles en CUALQUIER carpeta y proyecto, incluso repos con su propio `.git` (ej. Kibo).
 - `product-planner` → planeación, roadmap, backlog, sprints, estimación, priorización.
 - `ux-researcher` → investigación UX, personas, journey maps, usabilidad.
 - `ui-designer` → diseño visual/UI, design systems, tokens, branding.
@@ -66,9 +63,21 @@ Transversales (mejores prácticas, cualquier proyecto):
 - `security-auditor` → revisiones de seguridad, threat modeling, cloud/app security.
 - `qa-engineer` → estrategia y generación de pruebas, calidad.
 - `code-reviewer` → revisión de código (calidad, correctitud, seguridad).
+- `devops-engineer` → Docker, CI/CD (GitHub Actions), pnpm/Turbo, envs/secrets, despliegue.
+- `data-engineer` → ETL/Postgres/telemetría IoT/Streamlit data apps (complementa a data-platform).
+- `python-pro` → código Python idiomático y type-safe, pytest, pandas/NumPy, Streamlit/Postgres.
+- `business-analyst` → análisis de negocio/mercado/competencia, business cases, requisitos.
+- `technical-writer` → documentación técnica (READMEs, arquitectura, API, traducción).
+- `ai-engineer` → features con LLM (prompts, RAG, evals, integración de la API de Claude).
 
-A nivel proyecto puede haber agentes propios (ej. `streamlit-migrator` en el PMR) que se
-activan al abrir Claude Code dentro de esa carpeta.
+**De dominio — en `D:\LLM's\.claude\agents\` (workspace; visibles en todos los proyectos
+EXCEPTO en repos con `.git` propio como Kibo).**
+- `pm-docs` → minutas, status reports, PRDs, historias, comunicación interna.
+- `data-platform` → SQL Server + Power BI: conexión/análisis/auditoría, entregable white-label.
+- `web-architect` → construcción de plataformas web (Kibo, Mouna).
+
+**De proyecto — en `<proyecto>/.claude/agents/`.** Ej. `streamlit-migrator` (PMR),
+`requirements-agent` (Kibo). Se activan al abrir Claude Code dentro de esa carpeta.
 
 ### Orquestación
 Para tareas complejas, pídeme coordinar varios en cadena (ej.: producto nuevo →

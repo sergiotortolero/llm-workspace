@@ -25,7 +25,7 @@ and let us produce the migration plan.
   en esta carpeta). Porta el motor de reglas a Python, diseña backend/datos/auth y construye por fases.
 - **Documento de análisis y arquitectura:** colócalo en `docs/architecture/` (ver su README).
   Eso desbloquea las decisiones abiertas y el plan de migración.
-- **Apoyo:** skills globales `senior-architect`, `senior-data-engineer`, `senior-backend`, `senior-qa`.
+- **Apoyo:** skills globales `senior-architect`, `senior-backend`, `senior-qa`; agentes `python-pro`, `data-engineer`.
 
 ## Rules
 - Respond to Sergio in Spanish; code, comments, and docs in English.
