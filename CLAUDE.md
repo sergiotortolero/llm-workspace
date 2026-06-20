@@ -15,7 +15,7 @@ Agrupados en dos carpetas con CLAUDE.md de contexto compartido.
 BI (líder Abel Martínez):
 - Guarda Express (cliente; Power BI de consolidación financiera)
 - Tablero de Consolidación Financiera (interno; antes "Data-SQL-PowerBI")
-- Seguimiento Chubb (Alteryx, Siniestralidad, Enlace Chile) — solo seguimiento (Sara Torres, quincenal)
+- Seguimiento Chubb (Alteryx, Siniestralidad, Enlace Chile) — solo seguimiento (contacto Chubb, quincenal)
 Desarrollo (líder Héctor Esparza):
 - Corrections Module PMR - Streamlit (Chubb) — 🔴 PRIORIDAD ACTUAL
 - WebMethods - XPD Global (SAP B1 ↔ CargoWise) — asesoría, en cierre

@@ -9,10 +9,10 @@ Tracking-only initiatives for client **Chubb**: **Alteryx**, **Siniestralidad**,
 
 ## What "seguimiento" means
 Every **two weeks**, ask the Chubb team how the assignments are progressing.
-- Contact: **Sara Torres** — `Sara.Torres@Chubb.com`.
+- Contact: kept in private notes (not published in this repo).
 
 ## Status
-Tracking only. The recurring action is the biweekly check-in with Sara Torres.
+Tracking only. The recurring action is the biweekly check-in with the Chubb contact.
 
 ## Notes
 - If any of the three (Alteryx / Siniestralidad / Enlace Chile) becomes an active workstream,

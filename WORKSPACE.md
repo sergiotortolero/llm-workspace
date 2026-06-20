@@ -28,7 +28,7 @@ D:\LLM's\
     ├── TIBS/                   # Trabajo — CLAUDE.md compartido (clientes, stakeholders)
     │   ├── Guarda Express/                      # BI — cliente (Power BI consolidación financiera)
     │   ├── Tablero de Consolidación Financiera/ # BI — interno (antes Data-SQL-PowerBI)
-    │   ├── Seguimiento Chubb/                   # BI — solo seguimiento (Sara Torres, quincenal)
+    │   ├── Seguimiento Chubb/                   # BI — solo seguimiento (contacto Chubb, quincenal)
     │   ├── Corrections Module PMR - Streamlit/  # Desarrollo — Chubb (React→Streamlit) 🔴 urgente
     │   ├── WebMethods - XPD Global/             # Desarrollo — SAP B1 ↔ CargoWise (asesoría, en cierre)
     │   └── AppConsulta/                         # Desarrollo — utilitario local (solo referencia)
