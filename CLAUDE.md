@@ -1,5 +1,10 @@
 # Orquestador General — Sergio Tortolero
 
+@constitution.md
+<!-- ^ Imports the global immutable laws (security, read-only DB, financial redaction,
+     evidence, PRD/ADR, handoff, language, tool-matrix, least-privilege).
+     Keep the rules there — do NOT duplicate them in this file. -->
+
 ## Quién soy
 PM aprendiendo vibe coding. Sin rol técnico pero con criterio 
 para evaluar decisiones. Creo productos digitales con IA, aprendiendo "vibe coding".
@@ -30,15 +35,15 @@ Stakeholders TIBS: Mario Monroy (Dir. General) · Abel Martínez (BI) · Héctor
 (Desarrollo) · Chubb: Liliana Pérez (líder directa) → Marcio Bueno (Data LATAM).
 Contexto: Proyectos/TIBS/CLAUDE.md y Proyectos/Personal/CLAUDE.md.
 
-## Reglas globales
-- Respóndeme en español, código y docs en inglés
-- Explícame conceptos técnicos aunque no te los pida
-- Antes de construir cualquier feature: verifica que existe PRD en docs/prd/
-- Antes de decidir arquitectura: crea ADR en docs/adr/
-- No asumas el stack de ningún proyecto sin leer su CLAUDE.md
-- Commits descriptivos en inglés explicando qué se hizo y por qué
-- No retengas información financiera de Sergio salvo instrucción explícita suya
-- Al citar la matriz de herramientas: "Según la matriz de herramientas (v.20 mayo 2026):"
+## Reglas globales → constitución
+Las leyes inmutables viven en `constitution.md` (importada arriba con `@constitution.md`).
+No se duplican aquí; este es solo el mapa de dónde quedó cada una:
+- Idioma y explicar conceptos → Art. 7 · Commits descriptivos en inglés → Art. 7
+- PRD antes de feature · ADR antes de arquitectura → Art. 5
+- No asumir el stack sin leer el `CLAUDE.md` del proyecto → Art. 4
+- No retener información financiera → Art. 3
+- Cita exacta de la matriz de herramientas → Art. 8
+- (Refuerzos nuevos) Secretos fuera del código → Art. 1 · Datos de producción read-only → Art. 2
 
 ## Skills disponibles globalmente
 prompt-optimizer, senior-architect, senior-fullstack, senior-frontend,
